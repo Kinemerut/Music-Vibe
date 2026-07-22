@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Vibe</title>
+    
+    <meta property="og:title" content="Choose your bed...">
+    <meta property="og:description" content="Curated late-night sounds.">
+    <meta property="og:image" content="LINK_TO_A_PREVIEW_IMAGE.jpg">
+    <meta name="theme-color" content="#000000">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), 
+                        url('PLACEHOLDER_MAIN_BACKGROUND_IMAGE.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background-image: repeating-radial-gradient(#000 0 0.0001%, #fff 0 0.0002%);
+            opacity: 0.04; 
+            pointer-events: none; 
+            z-index: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-pic {
+            width: 110px;
+            height: 110px;
+            border-radius: 16px; 
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            animation: breathe 4s infinite ease-in-out;
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            font-style: italic;
+        }
+
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem; 
+        }
+
+        .tab {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.08); 
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            overflow: hidden; 
+            text-decoration: none;
+            color: white;
+            height: 90px; 
+            transition: transform 0.2s ease, background 0.2s ease;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .tab:active {
+            transform: scale(0.98) !important;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .tab-img {
+            width: 90px; 
+            height: 100%;
+            object-fit: cover;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tab-text {
+            flex: 1; 
+            padding: 0 1.2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+        }
+
+        @keyframes breathe {
+            0% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); }
+            50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); }
+            100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="ME" alt="Profile" class="profile-pic">
+        
+        <h1>Choose your bed...</h1>
+
+        <div class="links-container">
+            
+            <a href="" class="tab" style="animation-delay: 0s;">
+                <img src="clouds" alt="Melancholy" class="tab-img">
+                <div class="tab-text">Melancholic</div>
+            </a>
+
+            <a href="https://open.spotify.com/playlist/3BZXV82E8WPR7HrJpJvSHu?si=sBqO-kX6R1ez9t-lDfEB2g&pi=aHEub2t8RxyjB" class="tab" style="animation-delay: 1s;">
+                <img src="DTLA" alt="RES0NANCE" class="tab-img">
+                <div class="tab-text">Los angeles</div>
+            </a>
+
+            <a href="" class="tab" style="animation-delay: 2s;">
+                <img src="foggyforest" alt="Limerence" class="tab-img">
+                <div class="tab-text">:Limerence</div>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
